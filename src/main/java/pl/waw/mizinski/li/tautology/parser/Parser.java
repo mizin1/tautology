@@ -19,7 +19,6 @@ import pl.waw.mizinski.li.tautology.parser.token.Token;
 
 public class Parser {
 
-//	private Lexer lexer;
 	private List<Token> tokens;
 	int i = 0;
 	
@@ -94,6 +93,5 @@ public class Parser {
 		Token ret = getNextToken();
 		i++;
 		return ret;
-		
 	}
 }

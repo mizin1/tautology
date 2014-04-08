@@ -1,6 +1,8 @@
-package pl.waw.mizinski.li.tautology.tree;
+package pl.waw.mizinski.li.tautology.tree.operations;
 
 import java.util.List;
+
+import pl.waw.mizinski.li.tautology.tree.Sequent;
 
 public interface Operation {
 	

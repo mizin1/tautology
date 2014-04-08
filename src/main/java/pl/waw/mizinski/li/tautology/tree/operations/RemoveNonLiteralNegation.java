@@ -1,4 +1,4 @@
-package pl.waw.mizinski.li.tautology.tree;
+package pl.waw.mizinski.li.tautology.tree.operations;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import pl.waw.mizinski.li.tautology.formula.Disjunction;
 import pl.waw.mizinski.li.tautology.formula.Formula;
 import pl.waw.mizinski.li.tautology.formula.Implication;
 import pl.waw.mizinski.li.tautology.formula.Negation;
+import pl.waw.mizinski.li.tautology.tree.Sequent;
 
 public class RemoveNonLiteralNegation extends AbstractOperation{
 
