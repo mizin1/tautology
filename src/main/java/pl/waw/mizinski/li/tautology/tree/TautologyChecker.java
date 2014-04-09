@@ -50,6 +50,7 @@ public class TautologyChecker {
 		printSequent(printTree, sequent, spaces);
 		if (sequent.isIrreducible() && !sequent.isPrimary()) {
 			counterexample = sequent;
+			return;
 		}
 		for (Operation operation : operations) {
 			if (operation.isOperationPossible(sequent)){

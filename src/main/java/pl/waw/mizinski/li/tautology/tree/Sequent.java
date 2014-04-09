@@ -1,14 +1,14 @@
 package pl.waw.mizinski.li.tautology.tree;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 
 import pl.waw.mizinski.li.tautology.formula.Formula;
 import pl.waw.mizinski.li.tautology.formula.Literal;
 import pl.waw.mizinski.li.tautology.formula.Negation;
 
-public class Sequent extends ArrayList<Formula> {
+public class Sequent extends HashSet<Formula> {
 
 	private static final long serialVersionUID = 1L;
 

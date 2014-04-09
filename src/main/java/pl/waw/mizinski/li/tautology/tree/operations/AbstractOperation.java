@@ -8,7 +8,7 @@ import pl.waw.mizinski.li.tautology.tree.Sequent;
 
 public abstract class AbstractOperation implements Operation{
 	
-	public boolean hasFormula(Sequent sequent, Class<? extends Formula> clazz) {
+	protected boolean hasFormula(Sequent sequent, Class<? extends Formula> clazz) {
 		for (Formula formula : sequent) {
 			if (clazz.isInstance(formula)) {
 				return true;
@@ -17,7 +17,7 @@ public abstract class AbstractOperation implements Operation{
 		return false;
 	}
 	
-	public List<Sequent> asList(Sequent... sequents){
+	protected List<Sequent> asList(Sequent... sequents){
 		return Arrays.asList(sequents);
 	}
 }
