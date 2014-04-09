@@ -1,10 +1,10 @@
 package pl.waw.mizinski.li.tautology.formula;
 
 public abstract class BinaryOperatorFormula extends OperatorFormula {
-	
+
 	protected Formula leftArgument;
 	protected Formula rightArgument;
-	
+
 	public BinaryOperatorFormula(Formula leftArgument, Formula rightArgument) {
 		this.leftArgument = leftArgument;
 		this.rightArgument = rightArgument;
@@ -51,6 +51,4 @@ public abstract class BinaryOperatorFormula extends OperatorFormula {
 		return true;
 	}
 
-	
-	
 }

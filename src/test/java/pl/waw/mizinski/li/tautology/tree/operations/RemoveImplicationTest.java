@@ -8,6 +8,7 @@ import static pl.waw.mizinski.li.tautology.common.TestConstants.A;
 import static pl.waw.mizinski.li.tautology.common.TestConstants.B;
 import static pl.waw.mizinski.li.tautology.common.TestConstants.NA;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
@@ -32,7 +33,7 @@ private Operation operation = new RemoveImplication();
 		Sequent sequent = new Sequent(new Implication(A, B));
 		List<Sequent> sequents = operation.doOperation(sequent);
 		assertEquals(1, sequents.size());
-		assertArrayEquals(new Formula[]{NA, B}, sequents.get(0).toArray());
+		assertTrue( sequents.get(0).containsAll(Arrays.asList(NA, B)));
 	}
 	
 	@Test

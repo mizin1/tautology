@@ -2,7 +2,6 @@ package pl.waw.mizinski.li.tautology.parser;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 import static pl.waw.mizinski.li.tautology.common.TestConstants.*;
 
 import org.junit.Test;
@@ -69,5 +68,14 @@ public class ParserTest {
 		assertEquals(expr, formula.toString().replaceAll("\\s", ""));
 	}
 	
+
+	@Test(expected = ParseException.class)
+	public void shouldThrowExceptionWhenInvalidFormulaGiven() throws Exception {
+		new Parser("A+").getFormula();
+	}
 	
+	@Test(expected = ParseException.class)
+	public void shouldThrowExceptionWhenNoCloseGiven() throws Exception {
+		new Parser("(A").getFormula();
+	}
 }
