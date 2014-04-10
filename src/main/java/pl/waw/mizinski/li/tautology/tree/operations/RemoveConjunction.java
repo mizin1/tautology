@@ -18,8 +18,8 @@ public class RemoveConjunction extends AbstractOperation {
 	}
 
 	private List<Sequent> branchSequent(Sequent sequent, Conjunction conjunction) {
-		sequent.remove(conjunction);
-		Sequent sequent1 = sequent;
+		Sequent sequent1 = (Sequent) sequent.clone();;
+		sequent1.remove(conjunction);
 		Sequent sequent2 = (Sequent) sequent1.clone();
 		sequent1.add(conjunction.getLeftArgument());
 		sequent2.add(conjunction.getRightArgument());
